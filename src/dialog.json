@@ -1,0 +1,45 @@
+{
+    "welcome": "Welcome to Spell Master.",
+    "onBoarding": "To get started you will first need to add words to your spelling list. To do this, say, add word.",
+    "youCanSay": "You can say,",
+    "or": "or,",
+    "whatDo": "What would you like to do?",
+    "actions": {
+        "spellingTest": "start spelling test <break time=\"0.8s\"/>",
+        "addWord": "add word <break time=\"0.8s\"/>",
+        "deleteWord": "delete word <break time=\"0.8s\"/>",
+        "listWords": "read spelling list <break time=\"0.8s\"/>",
+        "help": "help <break time=\"0.8s\"/>"
+    },
+    "errors": {
+        "spellTestInProgress": "Your spelling test is in progress to complete this action you will first need to end your spelling test. To do this, say, end spelling test.",
+        "actions": "I am unable to complete this action.",
+        "sorry": "Sorry about that. Please try again."
+    },
+    "addWord": "Please spell the word you would like to add to your spelling list.",
+    "confirmAddWord": "Add the word, %s, correct?",
+    "duplicateEntry": "%s, is already on your spelling list.",
+    "wordAdded": "%s, has been added.",
+    "wordNotAdded": "%s, has not been added.",
+    "deleteWord": "Please spell the word you would like to delete from your spelling list.",
+    "confirmDeleteWord": "Delete the word, %s, correct?",
+    "cannotDeleteWord": "%s, is not in your spelling list.",
+    "wordDeleted": "%s, has been deleted.",
+    "wordNotDeleted": "%s, has not been deleted.",
+    "allWordsDeleted": "All words have been deleted.",
+    "readWords": "You have <say-as interpret-as=\"cardinal\">%d</say-as> word%s in your spelling list. They are, <break time=\"0.8s\"/>",
+    "spellingWord": "%s is spelt, <say-as interpret-as=\"spell-out\">%s</say-as>, now you spell it.",
+    "spellWord": "Spell, <break time=\"0.5s\"/>%s<break time=\"0.5s\"/>.",
+    "exitSpellingTest": "Stopping spelling test.",
+    "startingSpellingTest": "Starting spelling test.",
+    "help": {
+        "spelltest": "At any time you can say, repeat word, spell word, or exit spelling test.",
+        "basic": "You can start a spelling test, add word, remove word, new spelling list or say help. What would you like?"
+    },
+    "confirmSpeltWord": "You said, <say-as interpret-as=\"spell-out\">%s</say-as>, correct?",
+    "goodBye": "Good-bye.",
+    "correct": "Correct!",
+    "incorrect": "Incorrect.",
+    "testSummary": "End of spelling test. You scored <say-as interpret-as=\"cardinal\">%d</say-as> out of <say-as interpret-as=\"cardinal\">%d</say-as>."
+}
+

@@ -1,0 +1,29 @@
+# Ignore the build directory
+/build
+.grunt
+
+# Ignore the data files
+/data/*
+
+#Ignore
+auth.json
+
+# Ignore the node modules directory
+/node_modules
+
+# Ignore the bower directory
+/bower_components
+
+# Ignore graphics folder
+/graphics
+
+# Ignore audio folder
+/audio
+
+#ignore .blend1 file
+*.blend1
+*.blend
+
+#ignore sublime project file
+*.sublime-project
+*.sublime-workspace

@@ -1,0 +1,375 @@
+DeleteSpellingListIntent  delete spelling list
+
+StartSpellingTestIntent  start spelling test
+
+AddWordIntent  add word
+
+DeleteWordIntent  delete word
+
+RepeatWordIntent  repeat word
+
+SpellWordIntent  spell it for me
+
+ReadWordsIntent  read words
+
+AMAZON.CancelIntent stop spelling test
+
+SpellingIntent  {Spelling}
+
+
+
+AddWordIntent  add word
+AddWordIntent  add word to list
+AddWordIntent  add word on list
+AddWordIntent  add word on to list
+AddWordIntent  add word to the list
+AddWordIntent  add word on the list
+AddWordIntent  add word on to the list
+AddWordIntent  add word to spelling list
+AddWordIntent  add word on spelling list
+AddWordIntent  add word on to spelling list
+AddWordIntent  add word to the spelling list
+AddWordIntent  add word on the spelling list
+AddWordIntent  add word on to the spelling list
+AddWordIntent  add word to quiz
+AddWordIntent  add word on quiz
+AddWordIntent  add word on to quiz
+AddWordIntent  add word to the quiz
+AddWordIntent  add word on the quiz
+AddWordIntent  add word on to the quiz
+AddWordIntent  add words
+AddWordIntent  add words to list
+AddWordIntent  add words on list
+AddWordIntent  add words on to list
+AddWordIntent  add words to the list
+AddWordIntent  add words on the list
+AddWordIntent  add words on to the list
+AddWordIntent  add words to spelling list
+AddWordIntent  add words on spelling list
+AddWordIntent  add words on to spelling list
+AddWordIntent  add words to the spelling list
+AddWordIntent  add words on the spelling list
+AddWordIntent  add words on to the spelling list
+AddWordIntent  add words to quiz
+AddWordIntent  add words on quiz
+AddWordIntent  add words on to quiz
+AddWordIntent  add words to the quiz
+AddWordIntent  add words on the quiz
+AddWordIntent  add words on to the quiz
+AddWordIntent  add a word
+AddWordIntent  add a word to list
+AddWordIntent  add a word on list
+AddWordIntent  add a word on to list
+AddWordIntent  add a word to the list
+AddWordIntent  add a word on the list
+AddWordIntent  add a word on to the list
+AddWordIntent  add a word to spelling list
+AddWordIntent  add a word on spelling list
+AddWordIntent  add a word on to spelling list
+AddWordIntent  add a word to the spelling list
+AddWordIntent  add a word on the spelling list
+AddWordIntent  add a word on to the spelling list
+AddWordIntent  add a word to quiz
+AddWordIntent  add a word on quiz
+AddWordIntent  add a word on to quiz
+AddWordIntent  add a word to the quiz
+AddWordIntent  add a word on the quiz
+AddWordIntent  add a word on to the quiz
+AddWordIntent  add on word
+AddWordIntent  add on word to list
+AddWordIntent  add on word to the list
+AddWordIntent  add on word to spelling list
+AddWordIntent  add on word to the spelling list
+AddWordIntent  add on a word
+AddWordIntent  add on a word to list
+AddWordIntent  add on a word to the list
+AddWordIntent  add on a word to spelling list
+AddWordIntent  add on a word to the spelling list
+AddWordIntent  add on word to quiz
+AddWordIntent  add on word to the quiz
+AddWordIntent  add on a word to quiz
+AddWordIntent  add on a word to the quiz
+AddWordIntent  add on words
+AddWordIntent  add on words to list
+AddWordIntent  add on words to the list
+AddWordIntent  add on words to spelling list
+AddWordIntent  add on words to the spelling list
+AddWordIntent  add on words to quiz
+AddWordIntent  add on words to the quiz
+AddWordIntent  add more words
+AddWordIntent  add more words to my list
+AddWordIntent  add more words to my quiz
+AddWordIntent  add more words to my spelling list
+AddWordIntent  add additional words
+AddWordIntent  add additional words to my list
+AddWordIntent  add additional words to my quiz
+AddWordIntent  add additional words to my spelling list
+AddWordIntent  include word
+AddWordIntent  include word to list
+AddWordIntent  include word on list
+AddWordIntent  include word on to list
+AddWordIntent  include word to the list
+AddWordIntent  include word on the list
+AddWordIntent  include word on to the list
+AddWordIntent  include word to spelling list
+AddWordIntent  include word on spelling list
+AddWordIntent  include word on to spelling list
+AddWordIntent  include word to the spelling list
+AddWordIntent  include word on the spelling list
+AddWordIntent  include word on to the spelling list
+AddWordIntent  include word to quiz
+AddWordIntent  include word on quiz
+AddWordIntent  include word on to quiz
+AddWordIntent  include word to the quiz
+AddWordIntent  include word on the quiz
+AddWordIntent  include word on to the quiz
+AddWordIntent  include words
+AddWordIntent  include words to list
+AddWordIntent  include words on list
+AddWordIntent  include words on to list
+AddWordIntent  include words to the list
+AddWordIntent  include words on the list
+AddWordIntent  include words on to the list
+AddWordIntent  include words to spelling list
+AddWordIntent  include words on spelling list
+AddWordIntent  include words on to spelling list
+AddWordIntent  include words to the spelling list
+AddWordIntent  include words on the spelling list
+AddWordIntent  include words on to the spelling list
+AddWordIntent  include words to quiz
+AddWordIntent  include words on quiz
+AddWordIntent  include words on to quiz
+AddWordIntent  include words to the quiz
+AddWordIntent  include words on the quiz
+AddWordIntent  include words on to the quiz
+AddWordIntent  include a word
+AddWordIntent  include a word to list
+AddWordIntent  include a word on list
+AddWordIntent  include a word on to list
+AddWordIntent  include a word to the list
+AddWordIntent  include a word on the list
+AddWordIntent  include a word on to the list
+AddWordIntent  include a word to spelling list
+AddWordIntent  include a word on spelling list
+AddWordIntent  include a word on to spelling list
+AddWordIntent  include a word to the spelling list
+AddWordIntent  include a word on the spelling list
+AddWordIntent  include a word on to the spelling list
+AddWordIntent  include a word to quiz
+AddWordIntent  include a word on quiz
+AddWordIntent  include a word on to quiz
+AddWordIntent  include a word to the quiz
+AddWordIntent  include a word on the quiz
+AddWordIntent  include a word on to the quiz
+AddWordIntent  append to list
+AddWordIntent  append to spelling list
+AddWordIntent  append to quiz
+AddWordIntent  append word to list
+AddWordIntent  append word to the list
+AddWordIntent  append a word to list
+AddWordIntent  append a word to the list
+AddWordIntent  append word to spelling list
+AddWordIntent  append word to the spelling list
+AddWordIntent  append a word to spelling list
+AddWordIntent  append a word to the spelling list
+AddWordIntent  append word to quiz
+AddWordIntent  append word to the quiz
+AddWordIntent  append a word to quiz
+AddWordIntent  append a word to the quiz
+AddWordIntent  append words to list
+AddWordIntent  append words to the list
+AddWordIntent  append words to spelling list
+AddWordIntent  append words to the spelling list
+AddWordIntent  append words to quiz
+AddWordIntent  append words to the quiz
+
+ListWordsIntent  tell me the words in my list
+ListWordsIntent  list words
+ListWordsIntent  list the words in my spelling test
+ListWordsIntent  what words have I added
+
+ResetSpellingListIntent  new quiz
+ResetSpellingListIntent  new spelling test
+ResetSpellingListIntent  new spelling list
+ResetSpellingListIntent  new list
+ResetSpellingListIntent  clear quiz
+ResetSpellingListIntent  clear spelling test
+ResetSpellingListIntent  clear spelling list
+ResetSpellingListIntent  clear list
+ResetSpellingListIntent  clear all words
+ResetSpellingListIntent  clear all words from spelling test
+ResetSpellingListIntent  clear all words from spelling list
+ResetSpellingListIntent  clear all words from list
+ResetSpellingListIntent  clear all words from the spelling test
+ResetSpellingListIntent  clear all words from the spelling list
+ResetSpellingListIntent  clear all words from the list
+ResetSpellingListIntent  clear my quiz
+ResetSpellingListIntent  clear my spelling test
+ResetSpellingListIntent  clear my spelling list
+ResetSpellingListIntent  clear my list
+ResetSpellingListIntent  clear the quiz
+ResetSpellingListIntent  clear the spelling test
+ResetSpellingListIntent  clear the spelling list
+ResetSpellingListIntent  clear the list
+ResetSpellingListIntent  clear all my words
+ResetSpellingListIntent  clear all my words from spelling test
+ResetSpellingListIntent  clear all my words from spelling list
+ResetSpellingListIntent  clear all my words from list
+ResetSpellingListIntent  clear all my words from the spelling test
+ResetSpellingListIntent  clear all my words from the spelling list
+ResetSpellingListIntent  clear all my words from the list
+ResetSpellingListIntent  clear all my words from my spelling test
+ResetSpellingListIntent  clear all my words from my spelling list
+ResetSpellingListIntent  clear all my words from my list
+ResetSpellingListIntent  clear all words from my spelling test
+ResetSpellingListIntent  clear all words from my spelling list
+ResetSpellingListIntent  clear all words from my list
+
+ResetSpellingListIntent  remove quiz
+ResetSpellingListIntent  remove spelling test
+ResetSpellingListIntent  remove spelling list
+ResetSpellingListIntent  remove list
+ResetSpellingListIntent  remove all words
+ResetSpellingListIntent  remove all words from spelling test
+ResetSpellingListIntent  remove all words from spelling list
+ResetSpellingListIntent  remove all words from list
+ResetSpellingListIntent  delete quiz
+ResetSpellingListIntent  delete spelling test
+ResetSpellingListIntent  delete spelling list
+ResetSpellingListIntent  delete list
+ResetSpellingListIntent  delete all words
+ResetSpellingListIntent  delete all words from spelling test
+ResetSpellingListIntent  delete all words from spelling list
+ResetSpellingListIntent  delete all words from list
+ResetSpellingListIntent  erase quiz
+ResetSpellingListIntent  erase spelling test
+ResetSpellingListIntent  erase spelling list
+ResetSpellingListIntent  erase list
+ResetSpellingListIntent  erase all words
+ResetSpellingListIntent  erase all words from spelling test
+ResetSpellingListIntent  erase all words from spelling list
+ResetSpellingListIntent  erase all words from list
+ResetSpellingListIntent  discard quiz
+ResetSpellingListIntent  discard spelling test
+ResetSpellingListIntent  discard spelling list
+ResetSpellingListIntent  discard list
+ResetSpellingListIntent  discard all words
+ResetSpellingListIntent  discard all words from spelling test
+ResetSpellingListIntent  discard all words from spelling list
+ResetSpellingListIntent  discard all words from list
+
+RemoveWordIntent  remove word
+RemoveWordIntent  remove word
+RemoveWordIntent  edit list
+RemoveWordIntent  delete the word {Word}
+RemoveWordIntent  erase the word {Word}
+RemoveWordIntent  trash the word {Word}
+RemoveWordIntent  discard the word {Word}
+RemoveWordIntent  do away with the word {Word}
+RemoveWordIntent  throw out the word {Word}
+RemoveWordIntent  throw away the word {Word}
+
+
+RemoveWordIntent  remove word
+RemoveWordIntent  remove words
+RemoveWordIntent  remove my word
+RemoveWordIntent  remove my words
+RemoveWordIntent  remove the word
+RemoveWordIntent  remove the words
+RemoveWordIntent  remove a word
+RemoveWordIntent  remove word on list
+RemoveWordIntent  remove word on the list
+RemoveWordIntent  remove word on my list
+RemoveWordIntent  remove word from list
+RemoveWordIntent  remove word from the list
+RemoveWordIntent  remove word from my list
+RemoveWordIntent  remove words on list
+RemoveWordIntent  remove words on the list
+RemoveWordIntent  remove words on my list
+RemoveWordIntent  remove words from list
+RemoveWordIntent  remove words from the list
+RemoveWordIntent  remove words from my list
+RemoveWordIntent  remove my word on list
+RemoveWordIntent  remove my word on the list
+RemoveWordIntent  remove my word on my list
+RemoveWordIntent  remove my word from list
+RemoveWordIntent  remove my word from the list
+RemoveWordIntent  remove my word from my list
+RemoveWordIntent  remove my words on list
+RemoveWordIntent  remove my words on the list
+RemoveWordIntent  remove my words on my list
+RemoveWordIntent  remove my words from list
+RemoveWordIntent  remove my words from the list
+RemoveWordIntent  remove my words from my list
+RemoveWordIntent  remove a word on list
+RemoveWordIntent  remove a word on the list
+RemoveWordIntent  remove a word from list
+RemoveWordIntent  remove a word from the list
+RemoveWordIntent  remove a word from my list
+RemoveWordIntent  remove from list
+RemoveWordIntent  remove from the list
+RemoveWordIntent  remove from my list
+
+SpellWordIntent  spell it for me
+SpellWordIntent  spell that for me
+
+RepeatWordIntent  repeat word
+
+
+SpellingIntent  {Spelling}
+
+NewQuizIntent  new quiz
+NewQuizIntent  reset quiz
+NewQuizIntent  setup quiz
+NewQuizIntent  create quiz
+NewQuizIntent  make quiz
+NewQuizIntent  clear quiz
+
+RemoveWordIntent  remove {Word}
+RemoveWordIntent  remove the word {Word}
+RemoveWordIntent  remove the word {Word} from list
+RemoveWordIntent  remove {Word} from list
+RemoveWordIntent  delete {Word}
+RemoveWordIntent  delete the word {Word}
+RemoveWordIntent  erase {Word}
+RemoveWordIntent  erase the word {Word}
+RemoveWordIntent  trash word {Word}
+RemoveWordIntent  trash the word {Word}
+RemoveWordIntent  dispose of {Word}
+RemoveWordIntent  dispose of the word {Word}
+RemoveWordIntent  get rid of {Word}
+RemoveWordIntent  get rid of the word {Word}
+RemoveWordIntent  discard {Word}
+RemoveWordIntent  discard the word {Word}
+RemoveWordIntent  do away with {Word}
+RemoveWordIntent  do away with the word {Word}
+RemoveWordIntent  throw out {Word}
+RemoveWordIntent  throw out the word {Word}
+RemoveWordIntent  throw away {Word}
+RemoveWordIntent  throw away the word {Word}
+
+StartSpellingTestIntent  play again
+StartSpellingTestIntent  start quiz
+StartSpellingTestIntent  start game
+StartSpellingTestIntent  start test
+StartSpellingTestIntent  start spelling test
+StartSpellingTestIntent  start spelling bee
+StartSpellingTestIntent  start practicing
+StartSpellingTestIntent  start exam
+StartSpellingTestIntent  launch quiz
+StartSpellingTestIntent  launch game
+StartSpellingTestIntent  launch test
+StartSpellingTestIntent  launch spelling test
+StartSpellingTestIntent  launch spelling bee
+StartSpellingTestIntent  launch practicing
+StartSpellingTestIntent  launch exam
+StartSpellingTestIntent  open quiz
+StartSpellingTestIntent  open game
+StartSpellingTestIntent  open test
+StartSpellingTestIntent  open spelling test
+StartSpellingTestIntent  open spelling bee
+StartSpellingTestIntent  open practicing
+StartSpellingTestIntent  open exam
+StartSpellingTestIntent  quiz me
+StartSpellingTestIntent  test me
+

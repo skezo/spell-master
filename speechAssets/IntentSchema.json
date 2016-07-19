@@ -1,0 +1,49 @@
+{
+    "intents": [
+        {
+            "intent": "AddWordIntent"
+        },
+        {
+            "intent": "DeleteWordIntent"
+        },
+        {
+            "intent": "DeleteSpellingListIntent"
+        },
+        {
+            "intent": "ReadWordsIntent"
+        },
+        {
+            "intent": "SpellWordIntent"
+        },
+        {
+            "intent": "RepeatWordIntent"
+        },
+        {
+            "intent": "SpellingIntent",
+            "slots": [
+                {
+                    "name": "Spelling",
+                    "type": "LIST_OF_SPELLINGS"
+                }
+            ]
+        },
+        {
+            "intent": "StartSpellingTestIntent"
+        },
+        {
+            "intent": "AMAZON.HelpIntent"
+        },
+        {
+            "intent": "AMAZON.CancelIntent"
+        },
+        {
+            "intent": "AMAZON.StopIntent"
+        },
+        {
+            "intent": "AMAZON.YesIntent"
+        },
+        {
+            "intent": "AMAZON.NoIntent"
+        }
+    ]
+}
