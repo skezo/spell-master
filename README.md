@@ -150,7 +150,7 @@ Spell Master (test not in progress): "Good-bye."
 - [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) to store the spelling test data
 - [Alexa Skills Kit](https://developer.amazon.com/ask) makes it easy to add skills to Alexa
 - [Alexa Voice Service](https://developer.amazon.com/public/solutions/alexa/alexa-voice-service) helps to voice-enable any connected product
-- [Raspberry Pi](https://www.raspberrypi.org/products/) for setting up with Alexa Voice Service (e.g. creating an Echo)
+- [Raspberry Pi](https://www.raspberrypi.org/products/) for setting up with Alexa Voice Service (e.g. creating an Echo) so you can use as a use Alexa Skill testing tool
 
 ### Optional
 - [Echosim.io](https://Echosim.io) if you don't have a Raspberry Pi or Echo use this for testing your Alexa Skill.
