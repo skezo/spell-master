@@ -1,19 +1,14 @@
-#Spell Master
+# ![Spell Master](images/logo-wide.png)
 
 > Master your spelling with “Spell Master”. A simple Alexa Skill to help you practice for your spelling tests.
 
-![Spell Master](images/logo-wide.png)
-
 ##Purpose:
-To allow 6 year-olds and up to study independently for their school's spelling tests.
-
+To allow 6 year-olds and up to study independently for their school's spelling tests using Amazon's Alexa Voice Service (e.g. Amazon Echo).
 
 ### Features:
 - recognizes more than 24,000 kid-safe words
-- add words to your spelling list
-- delete words from your spelling list
+- edit your spelling list by adding and deleting words
 - practice your spellings with a spelling test
-
 
 ## Dialog Sample:
 
@@ -35,7 +30,7 @@ Dialog samples listed below might not reflect the final dialog used. To see the 
 
 ### Launch Spell Master 
 ![VUI: Launch](images/vui/launch.png)
-#### Dialog
+#### Dialog Sample:
 ```
 User: "Alexa, open Spell Master"
 Spell Master (onboarding): "Welcome to Spell Master. To get started you will first need to add words to your spelling list. To do this, say, add word."
@@ -44,7 +39,7 @@ Spell Master (default): "Welcome to Spell Master. You can say, start spelling te
 
 ### Add Word
 ![VUI: Add Word](images/vui/add_word.png)
-#### Dialog
+#### Dialog Sample:
 ```
 User: "Add word"
 Spell Master (test in progress): "Your spelling test is in progress to complete this action you will first need to end your spelling test. To do this, say, end spelling test."
@@ -59,7 +54,7 @@ Spell Master (if duplicate): "Climbing, has already been added to your spelling 
 
 ### Delete Word
 ![VUI: Delete Word](images/vui/delete_word.png)
-#### Dialog
+#### Dialog Sample:
 ```
 User: "Delete word"
 Spell Master (no words in list): "I am unable complete this action. To get started you will first need to add words to your spelling list. To do this, say, add word."
@@ -75,7 +70,7 @@ Spell Master (if not in list): "Climbing, is not in your spelling list. You can 
 
 ### Delete Spelling List
 ![VUI: Delete Spelling List](images/vui/delete_list.png)
-#### Dialog
+#### Dialog Sample:
 ```
 User: "Delete spelling list"
 Spell Master (no words in list): "I am unable complete this action. To get started you will first need to add words to your spelling list. To do this, say, add word."
@@ -85,7 +80,7 @@ Spell Master: "All words have been deleted. To get started you will first need t
 
 ### List/Read Words In Spelling List
 ![VUI: Read Words](images/vui/read_words.png)
-#### Dialog
+#### Dialog Sample:
 ```
 User: "List words"
 Spell Master (no words in list): "I am unable complete this action. To get started you will first need to add words to your spelling list. To do this, say, add word."
@@ -95,7 +90,7 @@ Spell Master: "You have 10 words in your spelling list. Listing words: Climbing,
 
 ### Start Spelling Test
 ![VUI: Start Spelling Test](images/vui/spelling_test.png)
-#### Dialog
+#### Dialog Sample:
 ```
 User: "Start spelling test"
 Spell Master (no words in list): "I am unable complete this action. To get started you will first need to add words to your spelling list. To do this, say, add word."
@@ -114,7 +109,7 @@ Spell Master: "End of spelling test. You scored 7 out of 10. You can say, start 
 
 ### Spell Word
 ![VUI: Spell Word](images/vui/spell_word.png)
-#### Dialog
+#### Dialog Sample:
 ```
 User: "Spell it for me"
 Spell Master: "Spell: climbing."
@@ -123,7 +118,7 @@ Spell Master (test not in progress): "I am unable complete this action."
 
 ### Repeat Word
 ![VUI: Repeat Word](images/vui/repeat_word.png)
-#### Dialog
+#### Dialog Sample:
 ```
 User: "Repeat word"
 Spell Master: "Climbing is spelt, C L I M B I N G, now your turn."
@@ -132,7 +127,7 @@ Spell Master (test not in progress): "I am unable complete this action."
 
 ### Help
 ![VUI: Help](images/vui/help.png)
-#### Dialog
+#### Dialog Sample:
 ```
 User: "Help"
 Spell Master (test in progress): "At any time you can say, repeat word, spell word, or end spelling test."
@@ -141,18 +136,24 @@ Spell Master (test not in progress): "You can say, start spelling test, add word
 
 ### Exit
 ![VUI: Exit](images/vui/exit.png)
-#### Dialog
+#### Dialog Sample:
 ```
 User: "Exit"
 Spell Master (test in progress): "Ending spelling test. You can say, start spelling test, add word, delete word, list all words, or help. What would you like to do?"
 Spell Master (test not in progress): "Good-bye."
 ```
 
-## Setup
+## Setup:
 
-### Requirements
+### Requirements:
+- [AWS Lambda](https://aws.amazon.com/lambda/) to run Alexa Skill function
+- [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) to store the spelling test data
+- [Alexa Skills Kit](https://developer.amazon.com/ask) makes it easy to add skills to Alexa
+- [Alexa Voice Service](https://developer.amazon.com/public/solutions/alexa/alexa-voice-service) helps to voice-enable any connected product
+- [Raspberry Pi](https://www.raspberrypi.org/products/) for setting up with Alexa Voice Service (e.g. creating an Echo)
 
-
+### Optional
+- [Echosim.io](https://Echosim.io) if you don't have a Raspberry Pi or Echo use this for testing your Alexa Skill.
 
 
 ## Resources:
