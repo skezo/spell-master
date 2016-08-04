@@ -1,0 +1,27 @@
+{
+  "name": "spell-master",
+  "version": "1.0.0",
+  "description": "A simple Alexa Skill to help you practice for your spelling tests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skezo/spell-master.git"
+  },
+  "keywords": [
+    "Alexa",
+    "spelling",
+    "skill"
+  ],
+  "author": "skezo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skezo/spell-master/issues"
+  },
+  "homepage": "https://github.com/skezo/spell-master#readme",
+  "dependencies": {
+    "alexa-sdk": "^1.0.3"
+  }
+}

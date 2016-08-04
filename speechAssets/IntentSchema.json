@@ -7,10 +7,13 @@
             "intent": "DeleteWordIntent"
         },
         {
-            "intent": "DeleteSpellingListIntent"
+            "intent": "DeleteAllWordsIntent"
         },
         {
             "intent": "ReadWordsIntent"
+        },
+        {
+            "intent": "StartTestIntent"
         },
         {
             "intent": "SpellWordIntent"
@@ -28,22 +31,25 @@
             ]
         },
         {
-            "intent": "StartSpellingTestIntent"
+            "intent": "AMAZON.YesIntent"
         },
         {
-            "intent": "AMAZON.HelpIntent"
+            "intent": "AMAZON.NoIntent"
         },
         {
-            "intent": "AMAZON.CancelIntent"
+            "intent": "AMAZON.RepeatIntent"
+        },
+        {
+            "intent": "AMAZON.StartOverIntent"
+        },
+        {
+            "intent": "AMAZON.PreviousIntent"
         },
         {
             "intent": "AMAZON.StopIntent"
         },
         {
-            "intent": "AMAZON.YesIntent"
-        },
-        {
-            "intent": "AMAZON.NoIntent"
+            "intent": "AMAZON.CancelIntent"
         }
     ]
 }

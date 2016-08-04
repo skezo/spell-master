@@ -3,14 +3,14 @@
 > Master your spelling with “Spell Master”. A simple Alexa Skill to help you practice for your spelling tests.
 
 ##Purpose:
-To allow 6 year-olds and up to study independently for their school's spelling tests using Amazon's Alexa Voice Service (e.g. Amazon Echo).
+To allow 6 year-olds and up to study independently for their school's spelling tests using a device connected to Amazon's Alexa Voice Service (e.g. Amazon Echo).
 
 ### Features:
 - recognizes more than 24,000 kid-safe words
 - edit your spelling list by adding and deleting words
 - practice your spellings with a spelling test
 
-## Dialog Sample:
+### Dialog Sample:
 
 ```
 User: "Alexa, open Spell Master"
@@ -159,6 +159,7 @@ Spell Master (test not in progress): "Good-bye."
 ## Resources:
 
 ### Alexa and AWS:
+- [Alexa Skills Kit SDK for Node.js](https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs)
 - [Intent Schema & Sample Utterances](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/defining-the-voice-interface)
 - [Custom Interaction Model Reference](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-interaction-model-reference)
 - [Alexa Skills Kit Voice Design Handbook](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-design-handbook)
@@ -176,3 +177,5 @@ Spell Master (test not in progress): "Good-bye."
 ## TODO:
 - Support British / American English
 - Improve VUI (dialog flow)
+- Automate Utterance creation
+- Code refactoring is needed 
