@@ -406,7 +406,7 @@ var spellTestModeHandlers = Alexa.CreateStateHandler(states.SPELLTESTMODE, {
         this.attributes['spelt'] = EMPTY_STRING;
 
         //Is this last word?
-        if (this.attributes['currentWordIndex'] + 2 < this.attributes['words'].length) {
+        if (this.attributes['currentWordIndex'] + 2 <= this.attributes['words'].length) {
             this.attributes['currentWordIndex'] += 1;
             currentWord = this.attributes['words'][this.attributes['currentWordIndex']];
             this.emit(':ask', speechOutput + ' ' + util.format(DIALOG.spellWord, currentWord), util.format(DIALOG.spellWord, currentWord));
@@ -454,5 +454,5 @@ var spellTestModeHandlers = Alexa.CreateStateHandler(states.SPELLTESTMODE, {
 
 
 function spellOutWord(spelling) {
-    return spelling.toUpperCase().split('').join(",<break time=\"0.6s\"/>") + "<break time=\"0.6s\"/>";
+    return spelling.toUpperCase().split('').join("<break time=\"0.6s\"/>") + "<break time=\"0.6s\"/>";
 }
