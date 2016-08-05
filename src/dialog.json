@@ -7,18 +7,26 @@
 
     "youCanSay": "You can say, start spelling test <break time=\"0.5s\"/>, add word <break time=\"0.5s\"/>, delete word <break time=\"0.5s\"/>, read spelling list <break time=\"0.5s\"/>, or delete spelling list <break time=\"0.5s\"/>. What would you like to do?",
     "sorry": "Sorry, I didn't get that.",
-    "goodBye": "Ok, let's practice again soon. Good-bye.",
+    "goodBye": "Ok, good luck on your test and let's practice again soon. Good-bye.",
     "cancelEdit": "Or say, cancel.",
+    "cancelExit": "Or say, cancel, to exit spell master.",
+    "cancelToMenu": "Or say, cancel, to return to the main menu.",
     "cantDoThis": "Sorry, I can't do this. You haven't added any words to your spelling list.",
 
+    "helpMenu": "I am here to help.",
+    "helpReadList": "You can say, repeat, to hear the words again.",
+    "helpSpellTest": "You can ask me to repeat a word, spell a word, restart the spelling test.",
+
+
+
     "addWord": "Please spell the word you would like to add.",
-    "confirmAddWord": "Do you want me to add the word, %s? Is that correct?",
-    "confirmAddWordReprompt": "Say yes to add the word, or no to remove it.",
+    "confirmAddWord": "Do you want me to add the word, %s?",
+    "confirmAddWordReprompt": "Say yes to add the word, or no to exclude it.",
     "wordAdded": "%s, has been added. Please spell another word you would like to add.",
     "duplicateEntry": "%s, is already on your spelling list.",
 
     "deleteWord": "Please spell the word you would like to delete.",
-    "confirmDeleteWord": "You want me to delete the word, %s. Is that correct?",
+    "confirmDeleteWord": "Do you want me to delete the word, %s?",
     "confirmDeleteWordReprompt": "Say yes to delete the word, or no to keep it.",
     "cannotDeleteWord": "%s, is not on your spelling list.",
     "wordDeleted": "%s, has been deleted. Please spell another word you would like to delete.",
@@ -38,7 +46,7 @@
     "confirmSpeltWordReprompt": "Say yes to confirm, or no to spell it again.",
 
     "spellingWord": "%s is spelt, %s. Now you spell %s.",
-    "spellingWordAddToList": "%s is spelt, %s. Do you want me to add it to your spelling list?",
+    "spellingWordAddToList": "%s is spelt, %s. Do you want me to add it?",
 
     "correct": "That is correct.",
     "incorrect": "That is incorrect. %s is spelt %s.",

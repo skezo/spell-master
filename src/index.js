@@ -153,6 +153,13 @@ var menuModeHandlers = Alexa.CreateStateHandler(states.MENUMODE, {
         this.handler.state = '';
         this.emitWithState('MainMenu');
     },
+    'AMAZON.HelpIntent': function () {
+        if (this.attributes['words'].length > 0) {
+            this.emit(':ask', DIALOG.helpMenu + ' ' + DIALOG.youCanSay + ' ' + DIALOG.cancelExit, DIALOG.youCanSay + ' ' + DIALOG.cancelExit);
+        } else {
+            this.emit(':ask', DIALOG.helpMenu + ' ' + DIALOG.onBoarding + ' ' + DIALOG.cancelExit, DIALOG.onBoarding + ' ' + DIALOG.cancelExit);
+        }
+    },
     'AMAZON.StopIntent': function () {
         this.emitWithState('SessionEndedRequest');
     },
@@ -194,7 +201,7 @@ var addWordModeHandlers = Alexa.CreateStateHandler(states.ADDWORDMODE, {
             return;
         }
         var currentWord = this.attributes['spelt'];
-        this.emit(':ask', util.format(DIALOG.spellingWordAddToList, currentWord, spellOutWord(currentWord), currentWord),  util.format(DIALOG.spellWord, currentWord));
+        this.emit(':ask', util.format(DIALOG.spellingWordAddToList, currentWord, spellOutWord(currentWord)),  DIALOG.confirmAddWordReprompt);
     },
     'AMAZON.YesIntent': function () {
         var speechOutput;
@@ -241,6 +248,13 @@ var addWordModeHandlers = Alexa.CreateStateHandler(states.ADDWORDMODE, {
         this.attributes['spelt'] = EMPTY_STRING;
         this.handler.state = '';
         this.emitWithState('MainMenu');
+    },
+    'AMAZON.HelpIntent': function () {
+        if (this.attributes['spelt'] !== EMPTY_STRING) {
+            this.emit(':ask', DIALOG.helpMenu + ' ' + DIALOG.confirmAddWord + ' ' + DIALOG.cancelToMenu, DIALOG.confirmAddWordReprompt + ' ' + DIALOG.cancelToMenu);
+        } else {
+            this.emit(':ask', DIALOG.helpMenu + ' ' + DIALOG.addWord + ' ' + DIALOG.cancelToMenu, DIALOG.addWord + ' ' + DIALOG.cancelToMenu);
+        }
     },
     SessionEndedRequest: function () {
         this.attributes['spelt'] = EMPTY_STRING;
@@ -316,6 +330,13 @@ var deleteWordModeHandlers = Alexa.CreateStateHandler(states.DELETEWORDMODE, {
         this.handler.state = '';
         this.emitWithState('MainMenu');
     },
+    'AMAZON.HelpIntent': function () {
+        if (this.attributes['spelt'] !== EMPTY_STRING) {
+            this.emit(':ask', DIALOG.helpMenu + ' ' + DIALOG.confirmDeleteWord + ' ' + DIALOG.cancelToMenu, DIALOG.confirmDeleteWordReprompt + ' ' + DIALOG.cancelToMenu);
+        } else {
+            this.emit(':ask', DIALOG.helpMenu + ' ' + DIALOG.deleteWord + ' ' + DIALOG.cancelToMenu, DIALOG.deleteWord + ' ' + DIALOG.cancelToMenu);
+        }
+    },
     SessionEndedRequest: function () {
         this.attributes['spelt'] = EMPTY_STRING;
         this.emit(':saveState', true); // Save session attributes to DynamoDB 
@@ -363,6 +384,9 @@ var deleteListModeHandlers = Alexa.CreateStateHandler(states.DELETELISTMODE, {
         this.handler.state = '';
         this.emitWithState('MainMenu');
     },
+    'AMAZON.HelpIntent': function () {
+        this.emit(':ask', DIALOG.helpMenu + ' ' + DIALOG.confirmDeleteList + ' ' + DIALOG.cancelToMenu, DIALOG.confirmDeleteListReprompt + ' ' + DIALOG.cancelToMenu);
+    },
     SessionEndedRequest: function () {
         this.emit(':saveState', true); // Save session attributes to DynamoDB 
     },
@@ -402,6 +426,9 @@ var readListModeHandlers = Alexa.CreateStateHandler(states.READLISTMODE, {
     'AMAZON.CancelIntent': function () {
         this.handler.state = '';
         this.emitWithState('MainMenu');
+    },
+    'AMAZON.HelpIntent': function () {
+        this.emit(':ask', DIALOG.helpMenu + ' ' + DIALOG.helpReadList + ' ' + DIALOG.cancelToMenu, DIALOG.helpReadList + ' ' + DIALOG.cancelToMenu);
     },
     SessionEndedRequest: function () {
         this.emit(':saveState', true); // Save session attributes to DynamoDB 
@@ -474,6 +501,9 @@ var spellTestModeHandlers = Alexa.CreateStateHandler(states.SPELLTESTMODE, {
         this.handler.state = states.MENUMODE;
         this.emitWithState('StartTestIntent');
     },
+    'AMAZON.PauseIntent': function () {
+        this.emitWithState('AMAZON.CancelIntent');
+    },
     'AMAZON.PreviousIntent': function () {
         this.emitWithState('AMAZON.CancelIntent');
     },
@@ -483,6 +513,9 @@ var spellTestModeHandlers = Alexa.CreateStateHandler(states.SPELLTESTMODE, {
     'AMAZON.CancelIntent': function () {
         this.handler.state = '';
         this.emitWithState('MainMenu');
+    },
+    'AMAZON.HelpIntent': function () {
+        this.emit(':ask', DIALOG.helpMenu + ' ' + DIALOG.helpSpellTest + ' ' + DIALOG.cancelToMenu, DIALOG.helpSpellTest + ' ' + DIALOG.cancelToMenu);
     },
     SessionEndedRequest: function () {
         this.emit(':saveState', true); // Save session attributes to DynamoDB 
