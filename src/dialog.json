@@ -1,22 +1,24 @@
 {
-    "welcome": "Welcome to Spell Master. You have added %d word%s to your spelling list.",
+    "welcome": "Welcome to Spell Master. You have added <say-as interpret-as=\"cardinal\">%d</say-as> word%s to your spelling list.",
+    "mainMenu": "You have added <say-as interpret-as=\"cardinal\">%d</say-as> word%s to your spelling list.",
 
     "onBoarding": "To get started you will need to add words to it. To do this, say, add word.",
     "onBoardingReprompt": "Say, add word, to get started.",
 
     "youCanSay": "You can say, start spelling test <break time=\"0.5s\"/>, add word <break time=\"0.5s\"/>, delete word <break time=\"0.5s\"/>, read spelling list <break time=\"0.5s\"/>, or delete spelling list <break time=\"0.5s\"/>. What would you like to do?",
     "sorry": "Sorry, I didn't get that.",
-    "goodBye": "Ok, let's play again soon. Good-bye.",
+    "goodBye": "Ok, let's practice again soon. Good-bye.",
+    "cancelEdit": "Or say, cancel.",
+    "cantDoThis": "Sorry, I can't do this. You haven't added any words to your spelling list.",
 
     "addWord": "Please spell the word you would like to add.",
-    "confirmAddWord": "Add the word, %s. Is that correct?",
-    "confirmAddWordReprompt": "Say yes to add the word, or no to remove the word.",
+    "confirmAddWord": "Do you want me to add the word, %s? Is that correct?",
+    "confirmAddWordReprompt": "Say yes to add the word, or no to remove it.",
     "wordAdded": "%s, has been added. Please spell another word you would like to add.",
     "duplicateEntry": "%s, is already on your spelling list.",
-    "cancelEdit": "Or say, cancel.",
 
     "deleteWord": "Please spell the word you would like to delete.",
-    "confirmDeleteWord": "Delete the word, %s. Is that correct?",
+    "confirmDeleteWord": "You want me to delete the word, %s. Is that correct?",
     "confirmDeleteWordReprompt": "Say yes to delete the word, or no to keep it.",
     "cannotDeleteWord": "%s, is not on your spelling list.",
     "wordDeleted": "%s, has been deleted. Please spell another word you would like to delete.",
@@ -24,60 +26,21 @@
     "confirmDeleteList": "Do you want me to delete your spelling list?",
     "confirmDeleteListReprompt": "Say yes to delete, or no to keep it.",
     "listDeleted": "Your spelling list has been deleted.",
-    "cantDoThis": "Sorry, I can't do this. You haven't added any words to your spelling list.",
 
     "readWords": "You have added <say-as interpret-as=\"cardinal\">%d</say-as> word%s to your spelling list. They are, <break time=\"0.5s\"/> %s. Would you like me to read that again?",
     "readWordsReprompt": "Would you like me to read that again?, Say yes to read again, or no to cancel.",
 
-    "startingSpellingTest": "Starting spelling test.",
-    "resumeSpellingTest": "Resuming spelling test. You are on the <say-as interpret-as=\"ordinal\">%d</say-as> word.",
+    "startingSpellingTest": "At any time you can ask me to repeat a word or have me spell it for you. Starting spelling test.",
+    "resumeSpellingTest": "At any time you restart your spelling test by saying, restart. Resuming spelling test. You are on the <say-as interpret-as=\"ordinal\">%d</say-as> word.",
     "spellWord": "Spell, <break time=\"0.5s\"/>%s<break time=\"0.5s\"/>.",
 
     "confirmSpeltWord": "You said, %s. Is that correct?",
     "confirmSpeltWordReprompt": "Say yes to confirm, or no to spell it again.",
 
     "spellingWord": "%s is spelt, %s. Now you spell %s.",
+    "spellingWordAddToList": "%s is spelt, %s. Do you want me to add it to your spelling list?",
 
-    "correct": "Correct!",
-    "incorrect": "Incorrect.",
-    "testSummary": "End of spelling test. You scored <say-as interpret-as=\"cardinal\">%d</say-as> out of <say-as interpret-as=\"cardinal\">%d</say-as>.",
-
-
-    "or": "or,",
-    "whatDo": "What would you like to do?",
-    "actions": {
-        "spellingTest": "start spelling test <break time=\"0.8s\"/>",
-        "addWord": "add word <break time=\"0.8s\"/>",
-        "deleteWord": "delete word <break time=\"0.8s\"/>",
-        "listWords": "read spelling list <break time=\"0.8s\"/>",
-        "help": "help <break time=\"0.8s\"/>"
-    },
-    "errors": {
-        "spellTestInProgress": "Your spelling test is in progress to complete this action you will first need to end your spelling test. To do this, say, end spelling test.",
-        "actions": "I am unable to complete this action.",
-        "sorry": "Please try again.",
-        "spellAgain": "Sorry I did not catch that. Please spell it again."
-    },
-        
-    
-    
-    
-    
-    
-    "wordNotDeleted": "%s, has not been deleted.",
-    
-    
-    
-    
-    "exitSpellingTest": "Stopping spelling test.",
-    
-    "help": {
-        "spelltest": "At any time you can say, repeat word, spell word, or exit spelling test.",
-        "basic": "You can start a spelling test, add word, remove word, new spelling list or say help. What would you like?"
-    },
-    "confirmSpeltWord": "You said, <say-as interpret-as=\"spell-out\">%s</say-as>, correct?"
-    
-    
-    
+    "correct": "That is correct.",
+    "incorrect": "That is incorrect. %s is spelt %s.",
+    "testSummary": "End of spelling test. You scored <say-as interpret-as=\"cardinal\">%d</say-as> out of <say-as interpret-as=\"cardinal\">%d</say-as>."
 }
-

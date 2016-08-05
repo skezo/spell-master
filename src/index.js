@@ -63,8 +63,31 @@ var newSessionHandlers = {
         // Welcome user and prompt them to get started
         this.emit(':ask', speechOutput, repromptSpeech);
     },
+    MainMenu: function() {
+        var speechOutput;
+        var repromptSpeech;
+        this.handler.state = states.MENUMODE;
+        // Build welcome message
+        speechOutput = util.format(DIALOG.mainMenu, this.attributes['words'].length, this.attributes['words'].length === 1 ? "" : "s");
+        // Has the user added any words to their spelling list
+        if (this.attributes['words'].length > 0) {
+            // Yes, list actions they can do
+            speechOutput += ' ' + DIALOG.youCanSay;
+            repromptSpeech = DIALOG.youCanSay;
+        } else {
+            // No, then walk them through it
+            speechOutput += ' ' + DIALOG.onBoarding;
+            repromptSpeech = DIALOG.onBoardingReprompt;
+        }
+        this.emit(':ask', speechOutput, repromptSpeech);
+    },
     Unhandled: function () {
-
+        // Undefined intents will be caught by the 'Unhandled' handler
+        if (this.attributes['words'].length > 0) {
+            this.emit(':ask', DIALOG.sorry + ' ' + DIALOG.youCanSay, DIALOG.youCanSay);
+        } else {
+            this.emit(':ask', DIALOG.sorry + ' ' + DIALOG.onBoarding, DIALOG.onBoarding);
+        }
     }
 };
 
@@ -126,6 +149,10 @@ var menuModeHandlers = Alexa.CreateStateHandler(states.MENUMODE, {
             this.emit(':ask', DIALOG.cantDoThis + ' ' + DIALOG.onBoarding, DIALOG.onBoardingReprompt);
         }
     },
+    'AMAZON.RepeatIntent': function () {
+        this.handler.state = '';
+        this.emitWithState('MainMenu');
+    },
     'AMAZON.StopIntent': function () {
         this.emitWithState('SessionEndedRequest');
     },
@@ -159,6 +186,15 @@ var addWordModeHandlers = Alexa.CreateStateHandler(states.ADDWORDMODE, {
             this.attributes['spelt'] = this.event.request.intent.slots.Spelling.value.toLowerCase();
         }
         this.emit(':ask', util.format(DIALOG.confirmAddWord, this.attributes['spelt']), DIALOG.confirmAddWordReprompt);
+    },
+    SpellWordIntent: function() {
+        // Is it empty
+        if (this.attributes['spelt'] === EMPTY_STRING || !this.attributes['spelt']) {
+            this.emitWithState('Unhandled');
+            return;
+        }
+        var currentWord = this.attributes['spelt'];
+        this.emit(':ask', util.format(DIALOG.spellingWordAddToList, currentWord, spellOutWord(currentWord), currentWord),  util.format(DIALOG.spellWord, currentWord));
     },
     'AMAZON.YesIntent': function () {
         var speechOutput;
@@ -203,7 +239,8 @@ var addWordModeHandlers = Alexa.CreateStateHandler(states.ADDWORDMODE, {
     },
     'AMAZON.CancelIntent': function () {
         this.attributes['spelt'] = EMPTY_STRING;
-        this.emitWithState('NewSession');
+        this.handler.state = '';
+        this.emitWithState('MainMenu');
     },
     SessionEndedRequest: function () {
         this.attributes['spelt'] = EMPTY_STRING;
@@ -276,7 +313,8 @@ var deleteWordModeHandlers = Alexa.CreateStateHandler(states.DELETEWORDMODE, {
     },
     'AMAZON.CancelIntent': function () {
         this.attributes['spelt'] = EMPTY_STRING;
-        this.emitWithState('NewSession');
+        this.handler.state = '';
+        this.emitWithState('MainMenu');
     },
     SessionEndedRequest: function () {
         this.attributes['spelt'] = EMPTY_STRING;
@@ -322,7 +360,8 @@ var deleteListModeHandlers = Alexa.CreateStateHandler(states.DELETELISTMODE, {
         this.emitWithState('AMAZON.CancelIntent');
     },
     'AMAZON.CancelIntent': function () {
-        this.emitWithState('NewSession');
+        this.handler.state = '';
+        this.emitWithState('MainMenu');
     },
     SessionEndedRequest: function () {
         this.emit(':saveState', true); // Save session attributes to DynamoDB 
@@ -361,7 +400,8 @@ var readListModeHandlers = Alexa.CreateStateHandler(states.READLISTMODE, {
         this.emitWithState('AMAZON.CancelIntent');
     },
     'AMAZON.CancelIntent': function () {
-        this.emitWithState('NewSession');
+        this.handler.state = '';
+        this.emitWithState('MainMenu');
     },
     SessionEndedRequest: function () {
         this.emit(':saveState', true); // Save session attributes to DynamoDB 
@@ -399,7 +439,7 @@ var spellTestModeHandlers = Alexa.CreateStateHandler(states.SPELLTESTMODE, {
             this.attributes['score'] += 1;
             speechOutput = DIALOG.correct;
         } else {
-            speechOutput = DIALOG.incorrect;
+            speechOutput = util.format(DIALOG.incorrect, currentWord, spellOutWord(currentWord));
         }
 
         // Clear spelt word
@@ -418,7 +458,8 @@ var spellTestModeHandlers = Alexa.CreateStateHandler(states.SPELLTESTMODE, {
         }
     },
     'AMAZON.NoIntent': function () {
-        
+        this.attributes['spelt'] = EMPTY_STRING;
+        this.emitWithState('AMAZON.RepeatIntent');
     },
     'AMAZON.RepeatIntent': function () {
         var currentWord = this.attributes['words'][this.attributes['currentWordIndex']];
@@ -440,7 +481,8 @@ var spellTestModeHandlers = Alexa.CreateStateHandler(states.SPELLTESTMODE, {
         this.emitWithState('AMAZON.CancelIntent');
     },
     'AMAZON.CancelIntent': function () {
-        this.emitWithState('NewSession');
+        this.handler.state = '';
+        this.emitWithState('MainMenu');
     },
     SessionEndedRequest: function () {
         this.emit(':saveState', true); // Save session attributes to DynamoDB 
@@ -448,7 +490,11 @@ var spellTestModeHandlers = Alexa.CreateStateHandler(states.SPELLTESTMODE, {
     Unhandled: function () {
         var currentWord = this.attributes['words'][this.attributes['currentWordIndex']];
         // Undefined intents will be caught by the 'Unhandled' handler
-        this.emit(':ask', DIALOG.sorry + ' ' + util.format(DIALOG.spellWord, currentWord) + ' ' + DIALOG.cancelEdit, util.format(DIALOG.spellWord, currentWord) + ' ' + DIALOG.cancelEdit);
+        if (this.attributes['spelt'] !== EMPTY_STRING) {
+            this.emitWithState('SpellingIntent');
+        } else {
+            this.emit(':ask', DIALOG.sorry + ' ' + util.format(DIALOG.spellWord, currentWord) + ' ' + DIALOG.cancelEdit, util.format(DIALOG.spellWord, currentWord) + ' ' + DIALOG.cancelEdit);
+        }
     }
 });
 
