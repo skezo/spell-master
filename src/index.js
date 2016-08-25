@@ -43,8 +43,6 @@ var newSessionHandlers = {
             this.attributes['spelt'] = EMPTY_STRING; // user spelt word - cannot be empty string
         }
 
-        console.log("newSessionHandlers:" + this.event.request.intent.name);
-
         // Set the current state, it will now use handlers defined in menuModeHandlers
         this.handler.state = states.MENUMODE;
 
