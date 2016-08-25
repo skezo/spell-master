@@ -7,7 +7,8 @@ var AUTH = require('./auth.json'); // Stores
 var APP_ID = AUTH.APP_ID;
 var SKILL_NAME = AUTH.SKILL_NAME;
 
-var EMPTY_STRING = ' ';
+// This is needed because dynamoDB does not support empty strings.
+var EMPTY_STRING = ' '; 
 
 // Define Skill's states:
 // this means you can set intent handlers to
@@ -25,6 +26,7 @@ exports.handler = function (event, context, callback) {
     var alexa = Alexa.handler(event, context);
     alexa.appId = APP_ID;
     alexa.dynamoDBTableName = AUTH.TABLE_NAME;
+    // Add all handlers here:
     alexa.registerHandlers(newSessionHandlers, menuModeHandlers, addWordModeHandlers, deleteWordModeHandlers, deleteListModeHandlers, readListModeHandlers, spellTestModeHandlers);
     alexa.execute();
 };

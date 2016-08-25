@@ -1,6 +1,7 @@
 {
     "welcome": "Welcome to Spell Master. You have added <say-as interpret-as=\"cardinal\">%d</say-as> word%s to your spelling list.",
-    "mainMenu": "You have added <say-as interpret-as=\"cardinal\">%d</say-as> word%s to your spelling list.",    "onBoarding": "To get started you will need to add words to it. To do this, say, add word.",
+    "mainMenu": "You have added <say-as interpret-as=\"cardinal\">%d</say-as> word%s to your spelling list.",
+    "onBoarding": "To get started you will need to add words to it. To do this, say, add word.",
     "onBoardingReprompt": "Say, add word, to get started.",
     "youCanSay": "You can say, start spelling test <break time=\"0.5s\"/>, add word <break time=\"0.5s\"/>, delete word <break time=\"0.5s\"/>, read spelling list <break time=\"0.5s\"/>, or delete spelling list <break time=\"0.5s\"/>. What would you like to do?",
     "sorry": "Sorry, I didn't get that.",
@@ -15,7 +16,7 @@
     "addWord": "Please spell the word you would like to add.",
     "confirmAddWord": "Do you want me to add the word, %s?",
     "confirmAddWordReprompt": "Say yes to add the word, or no to exclude it.",
-    "wordAdded": "%s, has been added. Please spell another word you would like to add.",
+    "wordAdded": "%s, has been added. Please spell another word you would like to add or say cancel.",
     "duplicateEntry": "%s, is already on your spelling list.",
     "deleteWord": "Please spell the word you would like to delete.",
     "confirmDeleteWord": "Do you want me to delete the word, %s?",
