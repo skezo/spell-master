@@ -19,9 +19,6 @@
             "intent": "SpellWordIntent"
         },
         {
-            "intent": "RepeatWordIntent"
-        },
-        {
             "intent": "SpellingIntent",
             "slots": [
                 {
@@ -50,6 +47,9 @@
         },
         {
             "intent": "AMAZON.CancelIntent"
+        },
+        {
+            "intent": "AMAZON.HelpIntent"
         }
     ]
 }

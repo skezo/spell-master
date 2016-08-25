@@ -43,6 +43,8 @@ var newSessionHandlers = {
             this.attributes['spelt'] = EMPTY_STRING; // user spelt word - cannot be empty string
         }
 
+        console.log("newSessionHandlers:" + this.event.request.intent.name);
+
         // Set the current state, it will now use handlers defined in menuModeHandlers
         this.handler.state = states.MENUMODE;
 
@@ -93,10 +95,6 @@ var newSessionHandlers = {
 
 // Handlers for when user is in the Main Menu
 var menuModeHandlers = Alexa.CreateStateHandler(states.MENUMODE, {
-    NewSession: function () {
-        this.handler.state = '';
-        this.emitWithState('NewSession'); // Call 'NewSession' from newSessionHandlers
-    },
     AddWordIntent: function () {
         this.attributes['spelt'] = EMPTY_STRING;
         this.handler.state = states.ADDWORDMODE;
