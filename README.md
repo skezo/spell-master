@@ -10,6 +10,9 @@ To allow 6 year-olds and up to study independently for their school's spelling t
 - Edit your spelling list by adding and deleting words
 - Practice your spellings with a spelling test
 
+### Published Skill:
+To use the published Spell Master skill you need to [enable it from the Alexa app/website](http://alexa.amazon.com/spa/index.html#skills). If the link does not work you can [seach for it](http://alexa.amazon.com/spa/index.html#skills) with the search term "Spell Master".
+
 ## Roll It As Your Own Skill: 
 1. Create an `auth.json` file inside the `src` folder. It should look like the below. Remember to replace the APP_ID value with your own Application Id when you have created one.
 ```json
@@ -69,7 +72,7 @@ User: "Start spelling test"
 ```
 
 ## Voice User Interface (VUI) Diagram:
-![VUI: Launch](images/vui/launch.png)
+![VUI: Launch](images/VUI.png)
 
 
 ## Setup Requirements:
@@ -80,9 +83,7 @@ User: "Start spelling test"
 - [Raspberry Pi](https://www.raspberrypi.org/products/) for setting up with Alexa Voice Service (e.g. creating an Echo) so you can use as a use Alexa Skill testing tool
 - [Node.js](https://nodejs.org/en/) for building the skill
 
-## Resources:
-
-### Alexa and AWS:
+## Alexa and AWS Resources:
 - [Alexa Skills Kit SDK for Node.js](https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs)
 - [Intent Schema & Sample Utterances](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/defining-the-voice-interface)
 - [Custom Interaction Model Reference](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-interaction-model-reference)
@@ -94,7 +95,7 @@ User: "Start spelling test"
 - [SSML Reference](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/speech-synthesis-markup-language-ssml-reference)
 - [Echosim.io](https://Echosim.io) if you don't have a Raspberry Pi or Echo use this for testing your Alexa Skill.
 
-### Dictionaries / Word Lists:
+## Dictionaries / Word Lists:
 - [English Word List](https://github.com/dwyl/english-words)
 - [English Spelling Dictionaries](http://phillipmfeldman.org/English/spelling%20dictionaries.html)
 - [Dictionaries by Grade Level](http://www.ideal-group.org/dictionary/)
