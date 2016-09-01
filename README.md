@@ -11,7 +11,7 @@ To allow 6 year-olds and up to study independently for their school's spelling t
 - Practice your spellings with a spelling test
 
 ### Published Skill:
-To use the published Spell Master skill you need to [enable it from the Alexa app/website](http://alexa.amazon.com/spa/index.html#skills). If the link does not work you can [seach for it](http://alexa.amazon.com/spa/index.html#skills) with the search term "Spell Master".
+To use the published Spell Master skill you need to [enable it from the Alexa app/website](http://alexa.amazon.com/spa/index.html#skills/dp/B01K72RH8S/?ref=skill_dsk_skb_sr_0). If the link does not work you can [seach for it](http://alexa.amazon.com/spa/index.html#skills) with the search term "Spell Master".
 
 ## Roll It As Your Own Skill: 
 1. Create an `auth.json` file inside the `src` folder. It should look like the below. Remember to replace the APP_ID value with your own Application Id when you have created one.
