@@ -85,7 +85,7 @@ var mainMenuHandlers = Alexa.CreateStateHandler(states.MENUMODE, {
         } else {
             // onboarding
             speechOutput += DIALOG.onBoarding;
-            this.emit(':askWithCard', speechOutput, DIALOG.onBoardingReprompt);
+            this.emit(':ask', speechOutput, DIALOG.onBoardingReprompt);
         }
     },
     AddWordIntent: function (isNewSession) {
@@ -135,7 +135,7 @@ var mainMenuHandlers = Alexa.CreateStateHandler(states.MENUMODE, {
     },
     'AMAZON.StopIntent': function () {
         //console.log("MainMenu/StopIntent: " + JSON.stringify(this));
-        this.emit('AMAZON.CancelIntent');
+        this.emitWithState('AMAZON.CancelIntent');
     },
     'AMAZON.CancelIntent': function () {
         //console.log("MainMenu/CancelIntent: " + JSON.stringify(this));
@@ -146,10 +146,21 @@ var mainMenuHandlers = Alexa.CreateStateHandler(states.MENUMODE, {
         //console.log("MainMenu/SessionEndedRequest: " + JSON.stringify(this));
         this.emit(':saveState', true); // Save session attributes to DynamoDB
     },
+    'AMAZON.HelpIntent': function () {
+        if (this.attributes.hasOwnProperty('words') && this.attributes['words'].length > 0) {
+            this.emit(':ask', DIALOG.helpMenu + ' ' + DIALOG.helpNav, DIALOG.helpNav);
+        } else {
+            this.emit(':ask', DIALOG.helpMenu + ' ' + DIALOG.helpOnBoarding, DIALOG.helpOnBoarding);
+        }
+    },
     Unhandled: function(isNewSession) {
         // When skill does not recognize intent
         //console.log("Unhandled: " + JSON.stringify(this));
-        this.emitWithState('LaunchRequest', isNewSession);
+        if (this.attributes.hasOwnProperty('words') && this.attributes['words'].length > 0) {
+            this.emit(':ask', DIALOG.sorry + ' ' + DIALOG.youCanSay, DIALOG.youCanSay);
+        } else {
+            this.emit(':ask', DIALOG.sorry + ' ' + DIALOG.onBoarding, DIALOG.onBoardingReprompt);
+        }
     }
 });
 

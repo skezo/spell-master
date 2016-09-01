@@ -11,6 +11,8 @@
     "cancelToMenu": "Or say, cancel, to return to the main menu.",
     "cantDoThis": "Sorry, I can't do this yet.",
     "helpMenu": "I am here to help.",
+    "helpOnBoarding": "Spell Master is all about helping you practice your spellings. The first thing you need to do is add a word to your spelling list. Once you have done this you will be able to add more words, delete words, and take a spelling test. To get started you say, add word, or cancel to exit spell master. What would you like to do?",
+    "helpNav": "You can say, start spelling test <break time=\"0.5s\"/>, add word <break time=\"0.5s\"/>, delete word <break time=\"0.5s\"/>, read spelling list <break time=\"0.5s\"/>, delete spelling list <break time=\"0.5s\"/>, or cancel to exit spell master. What would you like to do?",
     "helpReadList": "You can say, repeat, to hear the words again.",
     "helpSpellTest": "You can ask me to repeat a word, spell a word, and restart the spelling test.",
     "addWord": "Please spell the word you would like to add.",
